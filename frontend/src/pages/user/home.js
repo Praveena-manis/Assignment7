@@ -153,7 +153,7 @@ const Home = () => {
                 <img src={`${BASE_URL}/api/v1/product/download/${p.image}`} className="card-img-top" alt="..." width="200" height="350" />
                 <div className="card-body">
                   <h5 className="card-title">{p.name}</h5>
-                  <p className="card-text">{p.price}</p>
+                  <p className="card-text">Rs.{p.price}</p>
                   {/*used button with onclick event to navigate to productdetails page*/}
                   <button
                       className="btn btn-info ms-1"

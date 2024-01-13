@@ -56,7 +56,6 @@ const handleDecrement=(_id)=>{
     try{
       const {data}=await axios.get(`${BASE_URL}/api/v1/product/braintree/token`);
       setClientToken(data?.clientToken);
-      console.log(data);
     }catch(error){
       console.log(error);
     }
@@ -148,7 +147,7 @@ const handleDecrement=(_id)=>{
             <hr />
             {/*for checkout need to update the address*/}
             <h4>Total : {totalPrice()} </h4>
-            {auth.user.address ? (
+            {auth?.user?.address ? (
               <>
                 <div className="mb-3">
                   <h4>Current Address</h4>
@@ -163,7 +162,7 @@ const handleDecrement=(_id)=>{
               </>
             ) : (
               <div className="mb-3">
-                {auth.token ? (
+                {auth?.token ? (
                   <button
                     className="btn btn-outline-warning"
                     onClick={() => navigate("/dashboard/user/profile")}

@@ -72,5 +72,4 @@ function Register() {
         </Layout>
     );
 }
-
 export default Register;

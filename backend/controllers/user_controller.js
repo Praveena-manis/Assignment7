@@ -92,7 +92,6 @@ const allOrders = async (req, res) => {
       .populate("buyer", "name")
       .sort({ "createdAt": -1 });
     res.json(orders);
-    console.log(orders);
   } catch (error) {
     console.log(error);
     res.status(500).send({

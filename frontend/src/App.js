@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./components/home";
-import Register from "./pages/Auth/Register";
 import Login from "./pages/Auth/Login";
 import Dashboard from "./pages/user/dashboard";
 import PrivateRoute from "./components/routes/privateRoute";
@@ -17,6 +16,7 @@ import CartPage from "./pages/cartpage";
 import Profile from "./pages/user/profile";
 import Orders from './pages/user/orders';
 import AdminOrders from "./pages/Admin/adminorders";
+import Register from "./pages/Auth/Register";
 function App() {
   return (
     <>
@@ -40,7 +40,7 @@ function App() {
           <Route path="admin/updateproduct/:id" element={<UpdateProduct/>}/>
           <Route path="admin/orders" element={<AdminOrders />} />
         </Route>
-        <Route path="/register" element={<Register />} />
+        <Route path="/register" element={<Register/>} />
         <Route path="/login" element={<Login />} />
       </Routes>
    </div>

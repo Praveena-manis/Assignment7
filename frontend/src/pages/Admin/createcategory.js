@@ -144,6 +144,7 @@ const CreateCategory = () => {
                     </>
                   ))}
                 </tbody>
+                
               </table>
             </div>
             {/*used modal for updating the category*/}
